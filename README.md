@@ -139,19 +139,30 @@ que los reconstruya):
 }
 ```
 
-### 7. Subir a Drive como Google Doc
+### 7. Subir a Drive
 
 Con las herramientas MCP de Google Drive: `mcp__Google_Drive__create_file`,
 pasando el `.docx` como `base64Content` con
 `contentMimeType: application/vnd.openxmlformats-officedocument.wordprocessingml.document`,
-`parentId` la carpeta de destino, y **sin** `disableConversionToGoogleType`
-(así Drive lo convierte automáticamente a un Google Doc nativo con las
-imágenes incrustadas). Título recomendado: `AAAA-MM-DD - Título del vídeo`.
+`parentId` la carpeta de destino, y `disableConversionToGoogleType: true`.
+Título recomendado: `AAAA-MM-DD - Título del vídeo`.
+
+**Nota:** se intentó dejar que Drive convirtiera automáticamente el `.docx`
+a un Google Doc nativo (parámetro `disableConversionToGoogleType: false` u
+omitido) pero esta carpeta/cuenta devuelve `Invalid conversion requested` —
+la conversión automática no funciona aquí. Los informes quedan como
+documento Word nativo en Drive, lo cual sigue siendo perfectamente
+funcional (se abren directamente con Google Docs desde el navegador; el
+usuario puede convertirlos a Google Doc manualmente con "Abrir con >
+Google Docs" si lo prefiere). No merece la pena reintentar la conversión
+automática en cada ejecución.
 
 Para no inflar el contexto de la conversación con el base64 (puede pesar
 cientos de miles de tokens en texto), es preferible delegar la subida a un
 subagente en vez de leer el fichero con la herramienta `Read` del hilo
-principal.
+principal. Dale al subagente los parámetros exactos de arriba directamente
+(no le pidas que "explore" la API) para que no malgaste tiempo probando
+variantes de conversión que ya sabemos que fallan.
 
 ### 8. Actualizar el estado y commitear
 
