@@ -1,0 +1,28 @@
+{
+  "channel": "HobbieCode",
+  "channel_url": "https://www.youtube.com/@HobbieCode",
+  "drive_folder_id": "1tQhxEzhBbux-7rjzYnjhGCQIZ8qwVN_V",
+  "last_run_at": "2026-08-20T00:00:00Z",
+  "videos": [
+    { "id": "QEYx2sD4Zc8", "title": "Estaba en la MISERIA y la recuperé haciendo ESTO", "upload_date": "2026-08-19", "decision": "excluido", "reason": "Vlog personal, no trata de estrategias ni bots de trading algorítmico." },
+    { "id": "b9PQ8t4dWP8", "title": "Convertí a Claude en un Trader 24/7", "upload_date": "2026-08-16", "decision": "incluido", "drive_doc_title": "2026-08-16 - Convertí a Claude en un Trader 24/7" },
+    { "id": "w_tLbtxQ8KY", "title": "Cómo poner tus BOTS de Trading a operar 24/7 DESDE TU MÓVIL (sin ordenador)", "upload_date": "2026-08-13", "decision": "excluido", "reason": "Trata de infraestructura para operar bots ya existentes (VPS/móvil), no de una estrategia ni de construir un bot con IA." },
+    { "id": "TK1xBKEXczI", "title": "Si haces Trading y no eres Rentable, mira Esto", "upload_date": "2026-08-09", "decision": "excluido", "reason": "Contenido motivacional/estadístico general sobre por qué fracasan los traders manuales; no describe una estrategia ni un bot concreto." },
+    { "id": "ntRlhgSO0m0", "title": "El Test que le hago a TODAS mis Estrategias Rentables", "upload_date": "2026-08-06", "decision": "incluido", "drive_doc_title": "2026-08-06 - El Test que le hago a TODAS mis Estrategias Rentables" },
+    { "id": "SYIYAO945-c", "title": "Estrategia Rentable para el Nasdaq con la que paso TODAS las Pruebas de Fondeo", "upload_date": "2026-07-23", "decision": "incluido", "drive_doc_title": "2026-07-23 - Estrategia Rentable para el Nasdaq con la que paso TODAS las Pruebas de Fondeo" },
+    { "id": "T6WLF1eZqpo", "title": "Fable 5 vs SQX: La Batalla Definitiva entre IAs", "upload_date": "2026-07-21", "decision": "incluido", "drive_doc_title": "2026-07-21 - Fable 5 vs SQX: La Batalla Definitiva entre IAs" },
+    { "id": "3j0u3Mz1w24", "title": "Usa esta IA para Crear Robots de Trading GRATIS", "upload_date": "2026-07-19", "decision": "incluido", "drive_doc_title": "2026-07-19 - Usa esta IA para Crear Robots de Trading GRATIS" },
+    { "id": "Ci5jxrZb9G4", "title": "Estos 3 Indicadores para TradingView los ha creado la Mejor IA del Mundo", "upload_date": "2026-07-16", "decision": "incluido", "drive_doc_title": "2026-07-16 - Estos 3 Indicadores para TradingView los ha creado la Mejor IA del Mundo" },
+    { "id": "6XPP7oNEGTY", "title": "La Mejor Estrategia de Trading que Existe", "upload_date": "2026-07-12", "decision": "incluido", "drive_doc_title": "2026-07-12 - La Mejor Estrategia de Trading que Existe" },
+    { "id": "C6pwICv0lN8", "title": "Robot de Trading FVG que supera a TODAS las Estrategias (lo regalo)", "upload_date": "2026-07-09", "decision": "incluido", "drive_doc_title": "2026-07-09 - Robot de Trading FVG que supera a TODAS las Estrategias (lo regalo)" },
+    { "id": "sHDSrGetDRc", "title": "Creo una IA que me dice qué Acción Comprar", "upload_date": "2026-07-05", "decision": "excluido", "reason": "Es un panel de noticias/sentimiento de mercado (Claude Cowork), no genera una estrategia ni opera; no encaja ni con el criterio amplio." },
+    { "id": "xM_9KQFbjIg", "title": "Cómo Crear un Bot de Trading para Criptomonedas con IA", "upload_date": "2026-07-02", "decision": "incluido", "drive_doc_title": "2026-07-02 - Cómo Crear un Bot de Trading para Criptomonedas con IA" },
+    { "id": "p1daG6RLKzw", "title": "Las Mejores Empresas de Fondeo para pasar Pruebas en 2026", "upload_date": "2026-06-28", "decision": "excluido", "reason": "Ranking de empresas de fondeo (prop firms), no trata de estrategias ni bots de trading." },
+    { "id": "lcH1NaT90Bo", "title": "La ÚNICA manera para Crear Robots de Trading 100% Rentables (ahora sí) con Claude", "upload_date": "2026-06-25", "decision": "incluido", "drive_doc_title": "2026-06-25 - La ÚNICA manera para Crear Robots de Trading 100% Rentables (ahora sí) con Claude" },
+    { "id": "rkRIITtF3d4", "title": "Claude NO SIRVE para el Trading, pero esta IA sí", "upload_date": "2026-06-21", "decision": "incluido", "drive_doc_title": "2026-06-21 - Claude NO SIRVE para el Trading, pero esta IA sí" },
+    { "id": "-NA1sBrvkfg", "title": "La Estrategia para Pasar Pruebas de Fondeo Semanalmente", "upload_date": "2026-06-18", "decision": "incluido", "drive_doc_title": "2026-06-18 - La Estrategia para Pasar Pruebas de Fondeo Semanalmente" },
+    { "id": "W5YNjbjBc3I", "title": "Este BOT va a hacer que pases las Pruebas de Fondeo un 50% más", "upload_date": "2026-06-14", "decision": "incluido", "drive_doc_title": "2026-06-14 - Este BOT va a hacer que pases las Pruebas de Fondeo un 50% más" },
+    { "id": "0GlmFzy9m44", "title": "Evento Presencial 2026 - Academia Hobbiecode", "upload_date": "2026-06-10", "decision": "excluido", "reason": "Anuncio de un evento presencial, no contenido educativo sobre estrategias." },
+    { "id": "Fy5yNiSnlUk", "title": "Increíble Robot de Trading ICT hecho por IA (te lo regalo)", "upload_date": "2026-05-28", "decision": "incluido", "drive_doc_title": "2026-05-28 - Increíble Robot de Trading ICT hecho por IA (te lo regalo)" }
+  ]
+}
