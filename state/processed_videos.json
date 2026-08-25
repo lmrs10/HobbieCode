@@ -2,8 +2,9 @@
   "channel": "HobbieCode",
   "channel_url": "https://www.youtube.com/@HobbieCode",
   "drive_folder_id": "1tQhxEzhBbux-7rjzYnjhGCQIZ8qwVN_V",
-  "last_run_at": "2026-08-20T00:00:00Z",
+  "last_run_at": "2026-08-25T08:05:41Z",
   "videos": [
+    { "id": "78gxon__Tik", "title": "The Best Trading Strategy on the Internet (and I'm giving you the bot)", "upload_date": "2026-08-23", "decision": "incluido", "drive_doc_title": "2026-08-23 - The Best Trading Strategy on the Internet (and I'm giving you the bot)" },
     { "id": "QEYx2sD4Zc8", "title": "Estaba en la MISERIA y la recuperé haciendo ESTO", "upload_date": "2026-08-19", "decision": "excluido", "reason": "Vlog personal, no trata de estrategias ni bots de trading algorítmico." },
     { "id": "b9PQ8t4dWP8", "title": "Convertí a Claude en un Trader 24/7", "upload_date": "2026-08-16", "decision": "incluido", "drive_doc_title": "2026-08-16 - Convertí a Claude en un Trader 24/7" },
     { "id": "w_tLbtxQ8KY", "title": "Cómo poner tus BOTS de Trading a operar 24/7 DESDE TU MÓVIL (sin ordenador)", "upload_date": "2026-08-13", "decision": "excluido", "reason": "Trata de infraestructura para operar bots ya existentes (VPS/móvil), no de una estrategia ni de construir un bot con IA." },
