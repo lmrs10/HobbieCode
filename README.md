@@ -115,12 +115,39 @@ de solo la cara del presentador.
 
 ### 5. Redactar el resumen del informe
 
-Este paso requiere criterio humano/LLM: leer `transcript.txt` (y la
-descripción del vídeo) y redactar en español un resumen estructurado de la
-estrategia — instrumento, reglas de entrada/salida, gestión de riesgo,
-resultados si se mencionan, herramientas usadas (StrategyQuant, Claude Code,
-MetaTrader...). No hay script para esto: lo hace el agente/persona que
-ejecuta la revisión.
+Este paso requiere criterio humano/LLM: leer el `transcript.txt` **completo**
+(no solo un resumen o los primeros minutos) y la descripción del vídeo, y
+redactar en español un informe estructurado.
+
+**Estándar de calidad (obligatorio, no opcional):** el objetivo de estos
+informes es que alguien pueda *implementar* la estrategia a partir del
+documento, sin volver a ver el vídeo. Eso exige:
+
+- Una sección explícita **"Reglas de la estrategia"** (o título equivalente)
+  con los parámetros concretos mencionados en el vídeo, en formato
+  `Parámetro: Valor` — periodos de indicadores exactos (p. ej. "EMA 200", no
+  "una media móvil larga"), condiciones de entrada y salida, stop
+  loss/take profit (valores o ratios exactos), tamaño de posición o riesgo
+  por operación, activo y temporalidad si se especifican, y resultados de
+  backtest si se mencionan (win rate, nº de operaciones, periodo probado).
+- **Nunca rellenar con vaguedades** cuando el transcript no da un dato
+  concreto — mejor decir explícitamente "la fuente no especifica X" que
+  inventar o difuminar el dato.
+- Si el vídeo **no contiene ninguna regla de estrategia operable** (vídeos de
+  opinión, gestión de cuentas de fondeo, EAs de gestión de riesgo sin lógica
+  de entrada/salida, etc.), el informe debe decirlo con una sección de
+  **"Aviso"** al principio explicando claramente qué es y qué no es el vídeo,
+  en vez de disfrazar contenido vago como si fueran reglas. Si además el
+  vídeo no aporta prácticamente nada aprovechable, reconsiderar si debería
+  estar `excluido` según el criterio de filtrado de arriba, aunque roce el
+  criterio amplio de inclusión.
+- Incluir siempre: instrumento/activo, temporalidad, herramientas usadas
+  (StrategyQuant, Claude Code, MetaTrader, Pine Script...), y cualquier
+  resultado numérico de validación que se mencione, con sus cifras exactas.
+
+No hay script para esto: lo hace el agente/persona que ejecuta la revisión,
+y debe releer el transcript entero antes de dar el informe por terminado —
+no basta con una pasada rápida u orientada solo a extraer un resumen.
 
 ### 6. Generar el documento
 
