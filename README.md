@@ -54,18 +54,26 @@ antes de decidir.
 
 YouTube bloquea agresivamente (HTTP 429 / "Sign in to confirm you're not a
 bot") las peticiones a páginas de vídeo individuales sin cookies de sesión
-válidas. Hace falta la variable de entorno `YTDLP_COOKIES_B64` con un
-`cookies.txt` (formato Netscape) de una sesión de YouTube logueada,
-codificado en base64:
+válidas. `scripts/process_video.sh` necesita un `cookies.txt` (formato
+Netscape) de una sesión de YouTube logueada, y lo busca por este orden:
 
-```bash
-base64 -w0 cookies.txt
-```
+1. **`/root/.secrets/cookies.txt`** (recomendado) — fichero local en texto
+   plano, fuera del repo (nunca se commitea). Es la forma preferida de
+   refrescar las cookies porque se puede escribir directamente desde una
+   sesión (`Write`/`Bash`), sin tocar ajustes externos. Cuando el usuario
+   pegue un `cookies.txt` fresco en el chat, guárdalo ahí con permisos `600`.
+2. **Variable de entorno `YTDLP_COOKIES_B64`** (el mismo `cookies.txt`
+   codificado en base64: `base64 -w0 cookies.txt`) — solo como fallback si no
+   existe el fichero local. Esta variable se configura en los ajustes del
+   entorno de Claude Code (no en este repo); **no se puede modificar desde
+   dentro de una sesión** (escribir en `~/.bashrc` u otros ficheros de shell
+   está bloqueado por el clasificador de seguridad), así que si solo cuentas
+   con esta vía, un cambio de cookies solo dura para la sesión actual.
 
-Esta variable se configura en los ajustes del entorno de Claude Code (no en
-este repo, por seguridad). **Las cookies caducan/rotan** — si `scripts/process_video.sh`
-empieza a fallar con 429 o "cookies no longer valid", hay que pedir al
-usuario un `cookies.txt` fresco y volver a codificar la variable de entorno.
+**Las cookies caducan/rotan** — si el pipeline empieza a fallar con 429 o
+"cookies no longer valid", pide al usuario un `cookies.txt` fresco y
+guárdalo en `/root/.secrets/cookies.txt` (sobrescribiendo el anterior) para
+que las próximas ejecuciones de la Routine también lo usen.
 
 ### 2. Dependencias del entorno
 

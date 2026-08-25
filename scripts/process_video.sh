@@ -8,23 +8,32 @@
 # Requiere:
 #   - yt-dlp, ffmpeg, node (>=22) instalados
 #   - pip install yt-dlp-ejs   (resuelve el "n challenge" de YouTube sin necesitar --remote-components)
-#   - Variable de entorno YTDLP_COOKIES_B64 con cookies de una sesión de YouTube
-#     logueada, en formato Netscape cookies.txt, codificadas en base64.
+#   - Cookies de una sesión de YouTube logueada, en formato Netscape cookies.txt.
 #     Sin cookies válidas YouTube devuelve 429 / "Sign in to confirm you're not a bot"
 #     de forma consistente.
+#     Se usan, por orden de preferencia:
+#       1. /root/.secrets/cookies.txt (si existe) — fichero local fuera del repo,
+#          más fácil de refrescar que la variable de entorno (que no se puede
+#          modificar desde dentro de una sesión; ver README).
+#       2. Variable de entorno YTDLP_COOKIES_B64 (cookies.txt codificado en base64).
 set -e
 ID="$1"
 WORKROOT="${2:-work}"
 DIR="$WORKROOT/$ID"
 mkdir -p "$DIR"
 
-COOKIES_FILE="$(mktemp)"
-trap 'rm -f "$COOKIES_FILE"' EXIT
-if [ -z "$YTDLP_COOKIES_B64" ]; then
-  echo "ERROR: falta la variable de entorno YTDLP_COOKIES_B64 (cookies de YouTube en base64)." >&2
-  exit 1
+LOCAL_COOKIES="/root/.secrets/cookies.txt"
+if [ -f "$LOCAL_COOKIES" ]; then
+  COOKIES_FILE="$LOCAL_COOKIES"
+else
+  COOKIES_FILE="$(mktemp)"
+  trap 'rm -f "$COOKIES_FILE"' EXIT
+  if [ -z "$YTDLP_COOKIES_B64" ]; then
+    echo "ERROR: no hay cookies disponibles ($LOCAL_COOKIES no existe y falta YTDLP_COOKIES_B64)." >&2
+    exit 1
+  fi
+  echo "$YTDLP_COOKIES_B64" | base64 -d > "$COOKIES_FILE"
 fi
-echo "$YTDLP_COOKIES_B64" | base64 -d > "$COOKIES_FILE"
 
 cd "$DIR"
 
