@@ -2,8 +2,9 @@
   "channel": "HobbieCode",
   "channel_url": "https://www.youtube.com/@HobbieCode",
   "drive_folder_id": "1tQhxEzhBbux-7rjzYnjhGCQIZ8qwVN_V",
-  "last_run_at": "2026-08-28T08:05:59Z",
+  "last_run_at": "2026-08-31T08:06:03Z",
   "videos": [
+    { "id": "WpEvkmCM1ew", "title": "I withdrew $30,000... when I could have withdrawn $120,000", "upload_date": "2026-08-30", "decision": "incluido", "drive_doc_title": "2026-08-30 - Retiro $30.000...cuando podría haber retirado $120.000" },
     { "id": "Pb43C82LOTI", "title": "People Have Become Millionaires Trading Gold With This Strategy", "upload_date": "2026-08-27", "decision": "incluido", "drive_doc_title": "2026-08-27 - La Gente se ha hecho Millonaria haciendo Trading en el Oro con esta Estrategia" },
     { "id": "78gxon__Tik", "title": "The Best Trading Strategy on the Internet (and I'm giving you the bot)", "upload_date": "2026-08-23", "decision": "incluido", "drive_doc_title": "2026-08-23 - The Best Trading Strategy on the Internet (and I'm giving you the bot)" },
     { "id": "QEYx2sD4Zc8", "title": "Estaba en la MISERIA y la recuperé haciendo ESTO", "upload_date": "2026-08-19", "decision": "excluido", "reason": "Vlog personal, no trata de estrategias ni bots de trading algorítmico." },
